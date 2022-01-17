@@ -92,7 +92,7 @@
     <div class="bar bar-{{state}}"></div>
     <p class="status status-{{state}}">{{title}}</p>
     <p class="description">{{description}}</p>
-    <p class="last-updated">Last updated 2 min ago.</p>
+    <p class="last-updated">Last updated at {{last_updated_display}}.</p>
   </section>
   <footer>
     <ul>
@@ -102,4 +102,7 @@
     </ul>
     <p class="copy">&copy; 2022 Couchers.org</p>
   </footer>
+  <script>
+    var last_updated = "{{last_updated_timestamp}}";
+  </script>
 </body>
