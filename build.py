@@ -7,7 +7,7 @@ from subprocess import check_output
 
 print("Building status page...")
 
-# prints out unix timestamp of last modified
+# unix timestamp of last modification (according to git) of the status file
 last_updated_raw = (
     check_output(
         [

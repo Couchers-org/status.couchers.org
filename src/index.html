@@ -92,7 +92,7 @@
     <div class="bar bar-{{state}}"></div>
     <p class="status status-{{state}}">{{title}}</p>
     <p class="description">{{description}}</p>
-    <p class="last-updated">Last updated at {{last_updated_display}}.</p>
+    <p class="last-updated">Last updated <span id="last_updated">at {{last_updated_display}}</span>.</p>
   </section>
   <footer>
     <ul>
@@ -103,6 +103,19 @@
     <p class="copy">&copy; 2022 Couchers.org</p>
   </footer>
   <script>
-    var last_updated = "{{last_updated_timestamp}}";
+    const last_updated = {{last_updated_timestamp}};
+    const rtf = new Intl.RelativeTimeFormat();
+    const diff = (new Date(last_updated*1000) - new Date())/1000;
+    let rel_text = "";
+    if (diff < 2*60*60) {
+      rel_text = rtf.format(Math.round(diff / 60), "minute");
+    } else if (diff < 24*60*60) {
+      rel_text = rtf.format(Math.round(diff / 60 / 60), "hour");
+    } else {
+      rel_text = rtf.format(Math.round(diff / 60 / 60 / 24), "day");
+    }
+    const rel_text_el = document.getElementById("last_updated");
+    rel_text_el.innerText = rel_text;
+    rel_text_el.title = "{{last_updated_display}}";
   </script>
 </body>

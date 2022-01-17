@@ -1,5 +1,7 @@
 {
   "state": "{{state}}",
   "title": "{{title}}",
-  "description": "{{description}}"
+  "description": "{{description}}",
+  "last_updated": {{last_updated_timestamp}},
+  "last_updated_display": "{{last_updated_display}}"
 }
