@@ -1,1 +1,103 @@
-No known service issues.
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Couchers.org status page</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 400;
+    }
+    header {
+      margin: 0;
+      background-color: #fafafa;
+    }
+    .logo-container {
+      text-align: center;
+    }
+    .logo {
+      width: 6rem;
+      height: 6rem;
+    }
+    section, header, footer {
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    .status {
+      font-size: 1.3rem;
+    }
+    .good {
+      color: #247514;
+    }
+    .bad {
+      color: #bd2e15;
+    }
+    .bar-good {
+      background-color: #247514;
+    }
+    .bar-bad {
+      background-color: #bd2e15;
+    }
+    .bar {
+      display: block;
+      width: 10rem;
+      height: 10px;
+      border-radius: 5px;
+    }
+    .last-updated {
+      font-size: 0.8rem;
+      color: #666666;
+    }
+    footer {
+      margin-top: 6rem;
+    }
+    footer ul {
+      padding: 0;
+    }
+    .bottomlink {
+      display: inline-block;
+      padding-right: 2rem;
+    }
+    .bottomlink a {
+      color: #3273dc;
+      text-decoration: none;
+    }
+    .bottomlink a:hover {
+      color: #3363af;
+      text-decoration: none;
+    }
+    .copy {
+      padding-top: 2rem;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400,600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo-container"><img src="/logo.svg" class="logo"></div>
+  </header>
+  <section>
+    <h1>Couchers.org status page</h1>
+    <div class="bar bar-good"></div>
+    <p class="status good">No known issues, all system should be operational.</p>
+    <p class="description"></p>
+    <p class="last-updated">Last updated 2 min ago.</p>
+    <div class="bar bar-bad"></div>
+    <p class="status bad">Platform down.</p>
+    <p class="description">We are currently updating the database, expect downtime from 12 UTC to 12:30 UTC.</p>
+    <p class="last-updated">Last updated 2 min ago.</p>
+  </section>
+  <footer>
+    <ul>
+      <li class="bottomlink"><a href="https://couchers.org">Landing page</a></li>
+      <li class="bottomlink"><a href="https://app.couchers.org">Platform</a></li>
+      <li class="bottomlink"><a href="https://community.couchers.org">Community Forum</a></li>
+    </ul>
+    <p class="copy">&copy; 2022 Couchers.org</p>
+  </footer>
+</body>
