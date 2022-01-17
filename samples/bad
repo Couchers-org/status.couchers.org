@@ -1,0 +1,6 @@
+# "good", "bad", or "warning"
+bad
+# short description
+Platform down.
+# long description (optional)
+There is currently an outage, we are triaging the problem and will provide an update soon.

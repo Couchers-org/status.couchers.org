@@ -31,17 +31,23 @@
     .status {
       font-size: 1.3rem;
     }
-    .good {
+    .status-good {
       color: #247514;
-    }
-    .bad {
-      color: #bd2e15;
     }
     .bar-good {
       background-color: #247514;
     }
+    .status-bad {
+      color: #bd2e15;
+    }
     .bar-bad {
       background-color: #bd2e15;
+    }
+    .status-warning {
+      color: #bd7a15;
+    }
+    .bar-warning {
+      background-color: #bd7a15;
     }
     .bar {
       display: block;
@@ -83,13 +89,9 @@
   </header>
   <section>
     <h1>Couchers.org status page</h1>
-    <div class="bar bar-good"></div>
-    <p class="status good">No known issues, all system should be operational.</p>
-    <p class="description"></p>
-    <p class="last-updated">Last updated 2 min ago.</p>
-    <div class="bar bar-bad"></div>
-    <p class="status bad">Platform down.</p>
-    <p class="description">We are currently updating the database, expect downtime from 12 UTC to 12:30 UTC.</p>
+    <div class="bar bar-{{state}}"></div>
+    <p class="status status-{{state}}">{{title}}</p>
+    <p class="description">{{description}}</p>
     <p class="last-updated">Last updated 2 min ago.</p>
   </section>
   <footer>
