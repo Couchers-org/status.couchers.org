@@ -1,5 +1,6 @@
 # "good", "bad", or "warning"
-good
+warning
 # short description
-No known issues, all system should be operational.
+Planned maintenance.
 # long description (optional)
+We are currently performing planned maintenance, expect some downtime in the next 24 hours.
